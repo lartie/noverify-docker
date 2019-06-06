@@ -8,6 +8,4 @@ RUN apk update && apk --update add \
 RUN git clone https://github.com/JetBrains/phpstorm-stubs /root/phpstorm-stubs && \
     go get -u github.com/VKCOM/noverify
 
-RUN ls -l /
-
 ENTRYPOINT $ENTRYPOINT_CMD > /tmp/noverify/output.txt 2>&1
